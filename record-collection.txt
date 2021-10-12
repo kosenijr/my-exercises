@@ -33,7 +33,8 @@ After updateRecords(recordCollection, 1245, "albumTitle", "Riptide"), albumTitle
 
 
 
-_____________________________________________________________________________________________________________-
+____________________________________________________________________________________________________________
+
 // Setup
 var recordCollection = {
   2548: {
@@ -57,14 +58,22 @@ var recordCollection = {
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
+
+  /* 
+  - to be safe: use brackets as much as possible, instead of dot notation. See code below.
+  - also, be sure to use return statements in each area, after changes within if/else 
+    statements.
+  */
+
+
   if (prop !== 'tracks' && value !== '') {
     // create a new key within applicable subarrays: prop (i.e. artist).
     // set artist to the value parameter.
     /* n add a new property (prop) by using it at the end of object like this portion of 
     the 'if' statement: */
-    recordCollection[id][prop] = value;
+    records[id][prop] = value;
     // return the entire object
-    return recordCollection
+    return records
   } else if (prop === 'tracks' && records[id].hasOwnProperty('tracks') === false) {
     records[id][prop] = [];
     records[id][prop].push(value);
@@ -85,3 +94,8 @@ function updateRecords(records, id, prop, value) {
 }
 
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+
+Note: line 77 can also be written as:
+} else if (prop === 'tracks' && !records[id].hasOwnProperty('tracks')) {
+  /* Emphasis on the exclamation point as a negater */
