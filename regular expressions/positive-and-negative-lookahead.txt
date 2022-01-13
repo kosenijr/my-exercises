@@ -52,6 +52,14 @@ let result = pwRegex.test(sampleWord);
 console.log(result);
 
 /*
+A MORE CONCISE SOLUTION
+let sampleWord = "astronaut";
+let pwRegex =  /(?=\w{6})(?=\w*\d{2})/;
+let result = pwRegex.test(sampleWord);
+*/
+
+
+/*
 NOTES
 - reiteration:
 Hint 1
