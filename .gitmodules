@@ -1,6 +1,0 @@
-[submodule "backend development and apis/managing packages with npm/boilerplate-npm"]
-	path = backend development and apis/managing packages with npm/boilerplate-npm
-	url = https://github.com/freeCodeCamp/boilerplate-npm.git
-[submodule "backend development and apis/managing packages with npm/--force"]
-	path = backend development and apis/managing packages with npm/--force
-	url = https://github.com/freeCodeCamp/boilerplate-npm.git
