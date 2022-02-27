@@ -1,0 +1,3 @@
+[submodule "backend development and apis/managing packages with npm/boilerplate-npm"]
+	path = backend development and apis/managing packages with npm/boilerplate-npm
+	url = git@github.com:freeCodeCamp/boilerplate-npm.git
