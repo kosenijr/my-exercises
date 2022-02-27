@@ -1,0 +1,75 @@
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ ls
+
+boilerplate-npm/
+
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ git status
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ../../.gitmodules
+        new file:   boilerplate-npm
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../javascript algorithms and data structures/basic algorithm scripting/
+
+
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ git diff --cached boilerplate-npm/
+
+diff --git a/backend development and apis/managing packages with npm/boilerplate-npm b/backend development and apis/managing packages with npm/boilerplate-npm
+new file mode 160000
+index 0000000..1f53f43
+--- /dev/null
++++ b/backend development and apis/managing packages with npm/boilerplate-npm
+@@ -0,0 +1 @@
++Subproject commit 1f53f4364702b2b34204be03fde5e041a44bde99
+
+
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ git push origin master
+
+error: src refspec master does not match any
+error: failed to push some refs to 'github.com:kosenijr/freeCodeCamp.git'
+
+
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ git add .
+
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ git add .
+
+
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ git commit -m 'included boilerplate-npm repository'
+
+[main 3a11a9a] included boilerplate-npm repository
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 backend development and apis/managing packages with npm/boilerplate-npm
+
+
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ git push origin master
+
+error: src refspec master does not match any
+error: failed to push some refs to 'github.com:kosenijr/freeCodeCamp.git'
+
+
+Oseni@Kayode-HP MINGW64 ~/Development/freeCodeCamp/backend development and apis/managing packages with npm (main)
+$ git push
+
+Enter passphrase for key '/c/Users/Oseni/.ssh/id_rsa':
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 696 bytes | 696.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:kosenijr/freeCodeCamp.git
+   7b83e40..3a11a9a  main -> main
