@@ -1,0 +1,15 @@
+function factorialize(num) {
+  // create a new function: learned from mdn about factorials
+  let fact = function(num) {
+    // return the factorial if num is more than 1 and 1 if less that 1
+    return num >= 1 ? num * fact(num - 1) : 1;
+
+  }
+  num = fact(num);
+  // console.log(num);
+
+  return num;
+}
+
+factorialize(5);
+factorialize(10);
