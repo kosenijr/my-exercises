@@ -15,7 +15,6 @@ convertToF(0) should return a value of 32
 convertToF(20) should return a value of 68
 
 convertToF(30) should return a value of 86
-____________________________________________________________________________
 */
 
 /*

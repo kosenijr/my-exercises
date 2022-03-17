@@ -1,0 +1,19 @@
+function findLongestWordLength(str) {
+    // use split property to separate strings into substrings, use space w/in quotes
+    let words = str.split(' ');
+    // check result: s
+    console.log(words);
+
+    // sort words in descending order: use '-' symbol instead of '+'
+    let word = words.sort((a, b) => b.length - a.length);
+    // check results: s
+    console.log(word, typeof (word));
+    // store within str for proper return
+    str = word[0];
+    // check storage
+    console.log(str.length)
+    // let's rock!
+    return str.length;
+}
+// must call function for return
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
