@@ -1,0 +1,41 @@
+/*
+Reverse a String
+
+Reverse the provided string.
+
+You may need to turn the string into an array before you can reverse it.
+
+Your result must be a string.
+
+reverseString("hello") should return a string.
+
+reverseString("hello") should return the string olleh.
+
+reverseString("Howdy") should return the string ydwoH.
+
+reverseString("Greetings from Earth") should return the string htraE morf sgniteerG.
+________________________________
+*/
+
+function reverseString(str) {
+/*
+// create arr with str: [...str]
+let strArr = [...str];
+// apply reverse prop
+strArr.reverse();
+// join with closed quotes
+strArr.join("");
+// check strArr
+console.log(strArr);
+// join elements of strArr and store with str
+str = strArr.join("");
+// check str
+console.log(str);
+*/
+// bring everything together on one line and store in str
+str = [...str].reverse().join("");
+// return str
+  return str;
+}
+// call reverseString() with a string
+reverseString("hello");
