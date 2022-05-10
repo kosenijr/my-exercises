@@ -21,12 +21,12 @@ dog.sayLegs() should return the given string - note that punctuation and spacing
 */
 
 console.log('hey');
-// create object by using constructor
+// create object
 let dog = {
   name: 'Spot',
-  numLegs: 4
-
+  numLegs: 4,
+  sayLegs: () => `This dog has ${dog.numLegs} legs.`
 };
 // call function
-// dog.sayLegs();
-console.log(dog.name);
+dog.sayLegs(dog);
+console.log(dog.sayLegs());

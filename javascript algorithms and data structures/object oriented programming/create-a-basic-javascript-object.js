@@ -25,7 +25,7 @@ dog should have a numLegs property set to a number.
 ______________________________________________________________
 */
 
-// create object by using constructor
+// create object
 let dog = {
   name: 'Love',
   numLegs: 4

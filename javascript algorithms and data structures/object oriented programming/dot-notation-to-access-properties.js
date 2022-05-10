@@ -19,7 +19,7 @@ Your code should use console.log to print the value for the numLegs property of 
 ______________________________________________________________
 */
 
-// create object by using constructor
+// create object
 let dog = {
   name: 'Love',
   numLegs: 4
