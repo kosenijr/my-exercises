@@ -33,9 +33,15 @@ You should verify that myHouse is an instance of House using the instanceof oper
 ______________________________________________________________
 */
 console.log('let\'s start!');
-// verify an Object's constructor
+// House constructor with general param
 function House(numBedrooms) {
     this.numBedrooms = numBedrooms;
 }
+// Only change code below this line
 
-  // Only change code below this line
+//   create a new instance of House: myHouse
+let myHouse = new House(5);
+// check log and instanceof myHouse
+console.log(myHouse);
+let question = myHouse instanceof House;
+console.log(question);
