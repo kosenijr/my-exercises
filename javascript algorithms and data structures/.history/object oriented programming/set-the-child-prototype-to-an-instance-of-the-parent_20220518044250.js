@@ -38,10 +38,6 @@ function Dog() { }
 // Only change code below this line
 
 // Dog inherits from Animal
-Dog.prototype = Object.create(Animal.prototype)
 
-// new method used to assign Dog props to beagle
+// new method used to assign 
 let beagle = new Dog();
-
-// check instance
-console.log(Dog.prototype instanceof Animal)

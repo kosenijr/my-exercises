@@ -6,6 +6,7 @@ In the previous challenge you saw the first step for inheriting behavior from th
 
 This challenge covers the next step: set the prototype of the subtype (or child)—in this case, Bird—to be an instance of Animal.
 
+
 Bird.prototype = Object.create(Animal.prototype);
 Remember that the prototype is like the "recipe" for creating an object. In a way, the recipe for Bird now includes all the key "ingredients" from Animal.
 
@@ -37,11 +38,5 @@ function Dog() { }
 
 // Only change code below this line
 
-// Dog inherits from Animal
-Dog.prototype = Object.create(Animal.prototype)
 
-// new method used to assign Dog props to beagle
 let beagle = new Dog();
-
-// check instance
-console.log(Dog.prototype instanceof Animal)

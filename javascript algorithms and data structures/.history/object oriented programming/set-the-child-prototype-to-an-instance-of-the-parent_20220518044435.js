@@ -44,4 +44,4 @@ Dog.prototype = Object.create(Animal.prototype)
 let beagle = new Dog();
 
 // check instance
-console.log(Dog.prototype instanceof Animal)
+console.log(Dog. instanceof Animal)
