@@ -21,41 +21,39 @@ ______________________________________________________
 // variables
 // abbrev log to console, check
 const log = console.log;
-log('ready to go!');
+log('ready to go!')
 // create a new array
 let newarr = [];
 // create new variable for future storage
+let recyclarr;
 // main function
 function chunkArrayInGroups(arr, size) {
-    // abbrev log to console, setup frequency and store, new arr
-    const log = console.log;
+    // check arr, size
+    // log(arr, size);
+    // set up frequency for later application, check
     const freq = Math.ceil(arr.length / size);
-    // check
     // log(freq);
-    // newarr var
-    let newarr = [];
-    // store var
-    let temp;
-    // use for loop to navigate 
-    for (let k = 0; k < freq; k++) {
-        //  k represents each subarray b/c of for-loop context and quantifiable relationship with respect to freq.
-        // if the value of size remains true as k iterates ...
-        if (size) {
-            // log frequency and size
-            log(`freq: ${freq}, size: ${size}`)
-            // also remove characters ranging from 0 to the numerical value of size, then store in temp variable
-            temp = arr.splice(0, size);
-            // check temp
-            log(temp);
-            // push temp value into our new array
-            newarr.push(temp);
-            // segues to next iteration
-        }
-    };
-    // check newarr
+
+    // for loop with respect to frequency
+    for (let p = 0; p <= freq; p++) {
+        // recyclarr = arr;
+        // log(recyclarr);
+        // if (freq === size) {
+        //     recyclarr = arr.splice(0, freq);
+        //     newarr.push(recyclarr);
+        // }
+
+        return freq === size ? newarr.push(arr.splice(0, freq)) : null;
+        
+    }
+    // log(recyclarr);
     log(newarr);
-    arr = newarr;
+
+    // check new array
+    log(newarr);
+
     return arr;
+
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
