@@ -13,18 +13,13 @@ Functions with limited side effects - any changes, or mutations, to the state of
 
 The members of freeCodeCamp happen to love tea.
 
-
 In the code editor, the prepareTea and getTea functions are already defined for you. Call the getTea function to get 40 cups of tea for the team, and store them in the tea4TeamFCC variable.
-
 
 The tea4TeamFCC variable should hold 40 cups of tea for the team.
 
 The tea4TeamFCC variable should hold cups of green tea.
 ________________________________________________________________
 */
-// abbrev logs to console, check
-const log = console.log;
-log('ready to go!');
 // Function that returns a string representing a cup of green tea
 const prepareTea = () => 'greenTea';
 
@@ -44,9 +39,5 @@ const getTea = (numOfCups) => {
 };
 
 // Only change code below this line
-// const tea4TeamFCC = null;
-// call getTea for 40 cups, check
-const tea4TeamFCC = getTea(40);
-log(tea4TeamFCC);
-
+const tea4TeamFCC = null;
 // Only change code above this line

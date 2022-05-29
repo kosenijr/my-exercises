@@ -62,7 +62,7 @@ Window.prototype.tabClose = function (index) {
     // finalTabs.tabs should be ['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']
 
     // must add vine and workmail
-
+    
 
     const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
     // log(tabsBeforeIndex);
@@ -88,5 +88,5 @@ console.log(finalTabs.tabs);
 
 /*
 NOTES
-- for this activity, understand how splice works to bring certain tabs together: the first parameter of splice sets the location, the second parameter indicates how many tabs will be removed and stored in the variable.
+- for this activity, understand how splice works to bring certain tabs together: the first parameter of splice 
 */

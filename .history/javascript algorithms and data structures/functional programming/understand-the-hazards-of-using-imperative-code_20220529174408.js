@@ -62,8 +62,8 @@ Window.prototype.tabClose = function (index) {
     // finalTabs.tabs should be ['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']
 
     // must add vine and workmail
-
-
+    
+    
     const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
     // log(tabsBeforeIndex);
     const tabsAfterIndex = this.tabs.splice(1, index + 2); // Get the tabs after the tab
@@ -85,8 +85,3 @@ const finalTabs = socialWindow
     .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
     .join(workWindow.tabClose(1).tabOpen());
 console.log(finalTabs.tabs);
-
-/*
-NOTES
-- for this activity, understand how splice works to bring certain tabs together: the first parameter of splice sets the location, the second parameter indicates how many tabs will be removed and stored in the variable.
-*/

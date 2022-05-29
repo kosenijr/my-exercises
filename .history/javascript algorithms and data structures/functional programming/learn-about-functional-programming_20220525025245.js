@@ -36,7 +36,7 @@ a specific type of tea).
 const getTea = (numOfCups) => {
     const teaCups = [];
 
-    for (let cups = 1; cups <= numOfCups; cups += 1) {
+    for (let cups = 1; cups <= numOfCups; cups ) {
         const teaCup = prepareTea();
         teaCups.push(teaCup);
     }

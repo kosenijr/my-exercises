@@ -66,7 +66,7 @@ Window.prototype.tabClose = function (index) {
 
     const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
     // log(tabsBeforeIndex);
-    const tabsAfterIndex = this.tabs.splice(1, index + 2); // Get the tabs after the tab
+    // const tabsAfterIndex = this.tabs.splice(index); // Get the tabs after the tab
     // log(tabsAfterIndex);
     this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
     // log(this.tabs);
@@ -85,8 +85,3 @@ const finalTabs = socialWindow
     .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
     .join(workWindow.tabClose(1).tabOpen());
 console.log(finalTabs.tabs);
-
-/*
-NOTES
-- for this activity, understand how splice works to bring certain tabs together: the first parameter of splice sets the location, the second parameter indicates how many tabs will be removed and stored in the variable.
-*/

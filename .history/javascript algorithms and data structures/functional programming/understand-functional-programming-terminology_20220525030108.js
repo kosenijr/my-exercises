@@ -54,7 +54,7 @@ const getTea = (prepareTea, numOfCups) => {
 // const tea4BlackTeamFCC = null;
 // tea: 27 green, 13 black
 const tea4GreenTeamFCC = getTea(prepareGreenTea, 27);
-const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
+const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);;
 // Only change code above this line
 
 console.log(

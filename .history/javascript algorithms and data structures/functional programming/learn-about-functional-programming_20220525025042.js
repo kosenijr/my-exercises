@@ -22,7 +22,7 @@ The tea4TeamFCC variable should hold 40 cups of tea for the team.
 The tea4TeamFCC variable should hold cups of green tea.
 ________________________________________________________________
 */
-// abbrev logs to console, check
+// abbrev logs to console
 const log = console.log;
 log('ready to go!');
 // Function that returns a string representing a cup of green tea
@@ -45,8 +45,8 @@ const getTea = (numOfCups) => {
 
 // Only change code below this line
 // const tea4TeamFCC = null;
-// call getTea for 40 cups, check
+// call getTea for 40 cups
 const tea4TeamFCC = getTea(40);
-log(tea4TeamFCC);
+
 
 // Only change code above this line

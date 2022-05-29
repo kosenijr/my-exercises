@@ -46,7 +46,7 @@ const getTea = (numOfCups) => {
 // Only change code below this line
 // const tea4TeamFCC = null;
 // call getTea for 40 cups, check
-const tea4TeamFCC = getTea(40);
+const tea4TeamFCC = getTea(4);
 log(tea4TeamFCC);
 
 // Only change code above this line

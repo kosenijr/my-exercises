@@ -41,16 +41,16 @@ const Window = function (tabs) {
 
 // When you join two windows into one window
 Window.prototype.join = function (otherWindow) {
-    // log(this.tabs);
+    log(this.tabs);
     this.tabs = this.tabs.concat(otherWindow.tabs);
-    // log(this.tabs);
+    log(this.tabs);
     return this;
 };
 
 // When you open a new tab at the end
 Window.prototype.tabOpen = function (tab) {
     this.tabs.push('new tab'); // Let's open a new tab for now
-    // log(this.tabs);
+    log(this.tabs);
     return this;
 };
 
@@ -59,18 +59,13 @@ Window.prototype.tabClose = function (index) {
 
     // Only change code below this line
 
-    // finalTabs.tabs should be ['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']
-
-    // must add vine and workmail
-
-
     const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
-    // log(tabsBeforeIndex);
-    const tabsAfterIndex = this.tabs.splice(1, index + 2); // Get the tabs after the tab
-    // log(tabsAfterIndex);
+    const tabsAfterIndex = this.tabs.splice(index + 1); // Get the tabs after the tab
+
     this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
-    // log(this.tabs);
+
     // Only change code above this line
+
     return this;
 };
 
@@ -84,9 +79,4 @@ const finalTabs = socialWindow
     .tabOpen() // Open a new tab for cat memes
     .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
     .join(workWindow.tabClose(1).tabOpen());
-console.log(finalTabs.tabs);
-
-/*
-NOTES
-- for this activity, understand how splice works to bring certain tabs together: the first parameter of splice sets the location, the second parameter indicates how many tabs will be removed and stored in the variable.
-*/
+// console.log(finalTabs.tabs);

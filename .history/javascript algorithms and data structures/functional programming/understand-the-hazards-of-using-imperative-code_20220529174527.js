@@ -62,7 +62,7 @@ Window.prototype.tabClose = function (index) {
     // finalTabs.tabs should be ['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']
 
     // must add vine and workmail
-
+    
 
     const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
     // log(tabsBeforeIndex);
