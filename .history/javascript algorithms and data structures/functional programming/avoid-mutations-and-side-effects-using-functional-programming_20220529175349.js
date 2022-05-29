@@ -33,13 +33,4 @@ function incrementer() {
 
     // Only change code above this line
 }
-// checking function call
-console.log(incrementer());
-
-
-/*
-NOTES
-returning fixedValue += 1 would be incorrect in this situation because the ask was for the function to return the value of fixedValue increased by one, not for the numerical value of fixedValue to change as the result of the increase.
-*/
-
-
+console.log()

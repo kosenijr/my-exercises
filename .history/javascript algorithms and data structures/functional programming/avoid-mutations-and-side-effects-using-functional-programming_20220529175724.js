@@ -39,7 +39,7 @@ console.log(incrementer());
 
 /*
 NOTES
-returning fixedValue += 1 would be incorrect in this situation because the ask was for the function to return the value of fixedValue increased by one, not for the numerical value of fixedValue to change as the result of the increase.
+returning fixedValue += 1 would be incorrect in this situation because the ask was for fixedValue to be incremented by one, not for the 
 */
 
 
