@@ -29,10 +29,8 @@ ________________________________________________________________
 let fixedValue = 4;
 
 // Only change code below this line
-function incrementer(num) {
-    return num + 1;
+function incrementer() {
+
 
     // Only change code above this line
 }
-// check function call with param
-console.log(incrementer(fixedValue));

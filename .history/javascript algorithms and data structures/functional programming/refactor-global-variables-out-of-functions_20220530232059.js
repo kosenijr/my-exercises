@@ -63,8 +63,8 @@ function remove(oldList, bookName) {
 // add(bookList, 'Harry Potter and the Goblet of Fire')
 // log(add(bookList, 'Harry Potter and the Goblet of Fire'));
 
-// remove
-// remove(bookList, "On The Electrodynamics of Moving Bodies");
+remove
+remove(bookList, "On The Electrodynamics of Moving Bodies");
 // log(remove(bookList, "On The Electrodynamics of Moving Bodies"));
 
 // curve

@@ -61,7 +61,7 @@ function remove(oldList, bookName) {
 }
 // add
 // add(bookList, 'Harry Potter and the Goblet of Fire')
-// log(add(bookList, 'Harry Potter and the Goblet of Fire'));
+log(add(bookList, 'Harry Potter and the Goblet of Fire'));
 
 // remove
 // remove(bookList, "On The Electrodynamics of Moving Bodies");

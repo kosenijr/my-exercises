@@ -26,29 +26,30 @@ ________________________________________________________________
 // abbrev log to console, check
 const log = console.log;
 log('ready to go!');
-// _____________________________________________________________
 // The global variable
 const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
 
 // Change code below this line
 function add(oldList, bookName) {
-    // create a new array
+    // create an array
     let newList = [];
     newList.push(...oldList, bookName); // use push method and spread operator to make new and old lists completely distinct: comma breaks sequence of push action: first original list then the addition
     // console.table(newList); // new list takes the onus of modification from old list
-    // console.table(oldList); // original list remains unchanged
+    // console.table(oldList);
     return newList;
+
 
     // Change code above this line
 }
+
 // Change code below this line
 function remove(oldList, bookName) {
     const book_index = oldList.indexOf(bookName);
-    if (book_index >= 0) { //condition to target specific index within array
-        // create a new array
+    if (book_index >= 0) {
+        // create an array
         let newList = [];
-        // use push method and spread operator to duplicate old list within new list
-        newList.push(...oldList);
+        // push method and spread operator
+        newList.push(...oldList); // redundant
         // console.table(newList); // copy of old list
 
         newList.splice(book_index, 1);
@@ -68,6 +69,6 @@ function remove(oldList, bookName) {
 // log(remove(bookList, "On The Electrodynamics of Moving Bodies"));
 
 // curve
-// log(remove(add(bookList, "A Brief History of Time"), "On The Electrodynamics of Moving Bodies"));
+log(remove(add(bookList, "A Brief History of Time"), "On The Electrodynamics of Moving Bodies"));
 
 // log(remove(bookList, "On The Electrodynamics of Moving Bodies"));

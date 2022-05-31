@@ -70,4 +70,4 @@ function remove(oldList, bookName) {
 // curve
 // log(remove(add(bookList, "A Brief History of Time"), "On The Electrodynamics of Moving Bodies"));
 
-// log(remove(bookList, "On The Electrodynamics of Moving Bodies"));
+log(remove(bookList, "On The Electrodynamics of Moving Bodies"));

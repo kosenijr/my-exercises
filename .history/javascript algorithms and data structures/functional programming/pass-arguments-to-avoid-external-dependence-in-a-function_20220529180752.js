@@ -5,7 +5,7 @@ The last challenge was a step closer to functional programming principles, but t
 
 We didn't alter the global variable value, but the function incrementer would not work without the global variable fixedValue being there.
 
-Another principle of functional programming is to always declare your dependencies explicitly. This means if a function depends on a variable or object being present, then pass that variable or object directly into the function as an argument.
+Another principle of functional programming is to always declare your dependencies explicitly. This means if a function depends on a variable or object being present, then pass that variable kendrick or object directly into the function as an argument.
 
 There are several good consequences from this principle. The function is easier to test, you know exactly what input it takes, and it won't depend on anything else in your program.
 
@@ -29,10 +29,8 @@ ________________________________________________________________
 let fixedValue = 4;
 
 // Only change code below this line
-function incrementer(num) {
-    return num + 1;
+function incrementer() {
+
 
     // Only change code above this line
 }
-// check function call with param
-console.log(incrementer(fixedValue));

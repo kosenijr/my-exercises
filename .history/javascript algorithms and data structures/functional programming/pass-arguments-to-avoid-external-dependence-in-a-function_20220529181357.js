@@ -35,4 +35,3 @@ function incrementer(num) {
     // Only change code above this line
 }
 // check function call with param
-console.log(incrementer(fixedValue));

@@ -47,8 +47,8 @@ function remove(oldList, bookName) {
     if (book_index >= 0) { //condition to target specific index within array
         // create a new array
         let newList = [];
-        // use push method and spread operator to duplicate old list within new list
-        newList.push(...oldList);
+        // use push method and spread operator to make copy of old list within new list
+        newList.push(...oldList); // redundant
         // console.table(newList); // copy of old list
 
         newList.splice(book_index, 1);
@@ -68,6 +68,6 @@ function remove(oldList, bookName) {
 // log(remove(bookList, "On The Electrodynamics of Moving Bodies"));
 
 // curve
-// log(remove(add(bookList, "A Brief History of Time"), "On The Electrodynamics of Moving Bodies"));
+log(remove(add(bookList, "A Brief History of Time"), "On The Electrodynamics of Moving Bodies"));
 
 // log(remove(bookList, "On The Electrodynamics of Moving Bodies"));
