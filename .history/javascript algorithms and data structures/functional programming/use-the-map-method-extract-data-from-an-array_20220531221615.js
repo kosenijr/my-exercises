@@ -164,23 +164,13 @@ for (let i = 0; i < watchList.length; i++) {
 
 // new code: map method
 // set up new array
-let ratings = [];
+const ratings = [];
 // check watchList
 // log(watchList);
-// let's map!, create new variable
-watchList.map(elem => ratings.push({ title: elem['Title'], rating: elem['imdbRating'] }));
-
-// watchList.map(elem => ratings.push({ Release: elem['Released'], Duration: elem['Runtime'] }));
-
-
-
-// log(ratings);
+// let's map!
+watchList.map(elem => ratings.push(`Title: ${elem}, Rating: ${elem.imdbRating}`));
 
 
 // Only change code above this line
-console.log(JSON.stringify(ratings));
 
-/*
-NOTES
-- revisit JSON and JSON.stringify
-*/
+console.log(JSON.stringify(ratings));

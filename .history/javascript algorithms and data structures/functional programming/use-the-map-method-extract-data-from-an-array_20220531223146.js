@@ -168,11 +168,7 @@ let ratings = [];
 // check watchList
 // log(watchList);
 // let's map!, create new variable
-watchList.map(elem => ratings.push({ title: elem['Title'], rating: elem['imdbRating'] }));
-
-// watchList.map(elem => ratings.push({ Release: elem['Released'], Duration: elem['Runtime'] }));
-
-
+// watchList.map(elem => ratings.push({ title: elem['Title'], rating: elem['imdbRating'] }));
 
 // log(ratings);
 

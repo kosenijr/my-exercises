@@ -36,9 +36,7 @@ Your code should use the map method.
 ratings should equal [{"title": "Inception", "rating": "8.8"}, {"title": "Interstellar", "rating": "8.6"}, {"title": "The Dark Knight", "rating": "9.0"},{"title": "Batman Begins", "rating": "8.3"}, {"title": "Avatar", "rating": "7.9"}].
 ________________________________________________________________
 */
-// abbrev logs to console, check
-const log = console.log;
-log('ready to go!');
+// 
 // The global variable
 const watchList = [
     {
@@ -154,33 +152,12 @@ const watchList = [
 ];
 
 // Only change code below this line
-// old code: for loop
-/*
+
 const ratings = [];
 for (let i = 0; i < watchList.length; i++) {
     ratings.push({ title: watchList[i]["Title"], rating: watchList[i]["imdbRating"] });
 }
-*/
-
-// new code: map method
-// set up new array
-let ratings = [];
-// check watchList
-// log(watchList);
-// let's map!, create new variable
-watchList.map(elem => ratings.push({ title: elem['Title'], rating: elem['imdbRating'] }));
-
-// watchList.map(elem => ratings.push({ Release: elem['Released'], Duration: elem['Runtime'] }));
-
-
-
-// log(ratings);
-
 
 // Only change code above this line
-console.log(JSON.stringify(ratings));
 
-/*
-NOTES
-- revisit JSON and JSON.stringify
-*/
+console.log(JSON.stringify(ratings));

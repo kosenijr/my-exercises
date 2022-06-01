@@ -170,10 +170,6 @@ let ratings = [];
 // let's map!, create new variable
 watchList.map(elem => ratings.push({ title: elem['Title'], rating: elem['imdbRating'] }));
 
-// watchList.map(elem => ratings.push({ Release: elem['Released'], Duration: elem['Runtime'] }));
-
-
-
 // log(ratings);
 
 
@@ -182,5 +178,5 @@ console.log(JSON.stringify(ratings));
 
 /*
 NOTES
-- revisit JSON and JSON.stringify
+- revisit JSON and JSON.
 */
