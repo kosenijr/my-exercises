@@ -36,7 +36,7 @@ const new_s = s.myMap(function (item) {
     log(item * 2)
     return item * 2;
 });
-// check new_s
+
 log(new_s);
 
 /*

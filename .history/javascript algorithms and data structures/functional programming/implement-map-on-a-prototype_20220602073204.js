@@ -24,19 +24,17 @@ const s = [23, 65, 98, 5];
 Array.prototype.myMap = function (callback) {
     const newArray = [];
     // Only change code below this line
-    // use original array for the purpose of advancing the multiplicative transformation and transfer of elements to the newArray, check
-    s.forEach(item => newArray.push(item * 2));
-    log(newArray, s);
+    Array.prototype.forEach(item => log(newArray.push(item));
+    log(newArray);
     // Only change code above this line
     return newArray;
 };
 
 const new_s = s.myMap(function (item) {
-    // check multiplication
     log(item * 2)
     return item * 2;
 });
-// check new_s
+
 log(new_s);
 
 /*

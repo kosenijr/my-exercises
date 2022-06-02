@@ -24,44 +24,15 @@ const s = [23, 65, 98, 5];
 Array.prototype.myMap = function (callback) {
     const newArray = [];
     // Only change code below this line
-    // use original array for the purpose of advancing the multiplicative transformation and transfer of elements to the newArray, check
-    s.forEach(item => newArray.push(item * 2));
-    log(newArray, s);
-    // Only change code above this line
-    return newArray;
-};
-
-const new_s = s.myMap(function (item) {
-    // check multiplication
-    log(item * 2)
-    return item * 2;
-});
-// check new_s
-log(new_s);
-
-/*
-NOTES
-if callback is the equivalent of 
-function (item) { 
-    log(item * 2)
-    return item * 2;
-}
-
-Array.prototype.myMap = function (function (item) { 
-    log(item * 2)
-    return item * 2;
-})
-
-    const newArray = [];
-    // Only change code below this line
-    
-    this.forEach(log(callback));
-    log();
-    newArray.push();
+    newArray.push(...s);
     log(newArray);
     // Only change code above this line
     return newArray;
 };
 
+const new_s = s.myMap(function (item) {
+    log(`item: ${item}`);
+    return item * 2;
+});
 
-*/
+log(new_s);

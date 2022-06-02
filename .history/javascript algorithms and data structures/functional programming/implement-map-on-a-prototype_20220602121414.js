@@ -32,11 +32,11 @@ Array.prototype.myMap = function (callback) {
 };
 
 const new_s = s.myMap(function (item) {
-    // check multiplication
+    // check math
     log(item * 2)
     return item * 2;
 });
-// check new_s
+
 log(new_s);
 
 /*
