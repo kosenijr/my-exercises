@@ -22,10 +22,16 @@ sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 0, 1) should return ["Cat"].
 sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 4) should return ["Dog", "Tiger", "Zebra"].
 ________________________________________________________________
 */
+
+// abbrev logs to console, check
+const log = console.log;
+log('ready to go!');
+
 function sliceArray(anim, beginSlice, endSlice) {
     // Only change code below this line
-
-
+    anim = anim.slice(beginSlice, endSlice);
+    log(anim); // check for consistency
+    return anim; // must include return statement!
     // Only change code above this line
 }
 

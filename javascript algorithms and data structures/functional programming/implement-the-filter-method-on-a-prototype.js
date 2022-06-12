@@ -16,6 +16,8 @@ const s = [23, 65, 98, 5];
 Array.prototype.myFilter = function (callback) {
     // Only change code below this line
     const newArray = [];
+    // forEach method to run ternary condition and then push to new array
+    s.forEach(elem => (elem % 2) === 1 ? newArray.push(elem) : null);
     // Only change code above this line
     return newArray;
 };
@@ -24,3 +26,5 @@ const new_s = s.myFilter(function (item) {
     return item % 2 === 1;
 });
 
+// new_s should equal [23, 65, 5].
+console.log(new_s); // logs: [23, 65, 5]

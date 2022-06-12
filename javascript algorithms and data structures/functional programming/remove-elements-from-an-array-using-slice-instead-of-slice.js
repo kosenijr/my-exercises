@@ -24,7 +24,8 @@ ________________________________________________________________
 */
 function nonMutatingSplice(cities) {
     // Only change code below this line
-    return cities.splice(3);
+    console.log(cities.slice(0, 3))
+    return cities.slice(0, 3);
 
     // Only change code above this line
 }

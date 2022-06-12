@@ -19,7 +19,9 @@ ________________________________________________________________
 */
 function nonMutatingConcat(original, attach) {
     // Only change code below this line
-
+    const longArray = first.concat(second);
+    console.log(longArray);
+    return longArray;
 
     // Only change code above this line
 }
