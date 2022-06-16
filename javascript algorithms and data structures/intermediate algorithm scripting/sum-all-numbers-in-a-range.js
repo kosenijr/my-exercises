@@ -16,8 +16,36 @@ sumAll([5, 10]) should return 45.
 sumAll([10, 5]) should return 45.
 ________________________________________________________________
 */
-function sumAll(arr) {
-    return 1;
+// abbrev logs to console. then check.
+const log = console.log;
+log('let\'s rock');
+
+// complex sum function
+// function sumAll(arr) {
+//   // sort arr sequentially. then check.
+//   arr = arr.sort((a, b) => a - b);
+//   console.log(arr);
+//   // for loop for activity-defined sum
+//   let sum = 0;
+//   for (let k = arr[0]; k <= arr[1]; k++) {
+//     sum += k;
+//     // log(sum);
+//   }
+//   log(sum);
+//   return sum;
+// }
+
+// __________________________________________________________________-
+
+function sumAll(arr, sum = 0) {
+    arr = arr.sort((a, b) => a - b);
+    for (let k = arr[0]; k <= arr[1]; k++) { sum += k }
+    return sum;
 }
 
+// __________________________________________________________________-
+
 sumAll([1, 4]);
+// sumAll([10, 5]);
+// sumAll([4, 1]);
+// sumAll([5, 10]);

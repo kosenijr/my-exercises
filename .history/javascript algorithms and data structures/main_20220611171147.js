@@ -1,0 +1,1 @@
+import {} from './functional programming/use-the-every-method-to-check-that-every-element-in-an-array-meets-a-criteri'
