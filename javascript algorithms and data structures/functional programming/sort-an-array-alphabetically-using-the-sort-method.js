@@ -38,10 +38,13 @@ alphabeticalOrder(["a", "a", "a", "a", "x", "t"]) should return ["a", "a", "a", 
 ________________________________________________________________
 */
 function alphabeticalOrder(arr) {
-    // Only change code below this line
-
-    return arr
-    // Only change code above this line
+  // Only change code below this line
+  // implement sort method with function. then check.
+  arr.sort(function (a, b) {
+    return a < b ? -1 : 1
+  })
+  console.log(arr);
+  return arr
+  // Only change code above this line
 }
-
 alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);

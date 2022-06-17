@@ -150,20 +150,13 @@ const watchList = [
  The variable watchList holds an array of objects with information on several movies. Use a combination of filter and map on watchList to assign a new array of objects with only title and rating keys. The new array should only include objects where imdbRating is greater than or equal to 8.0. Note that the rating values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them.
  */
 
-// abbrev logs to console. then check.
+// abbrev logs to console, check
 const log = console.log;
-log('let\'s rock!');
-// change constant to let  for filteredList
-let filteredList = "";
-// create a new array
-let newArr = [];
-// map-to-filter processing
-watchList.filter(elem => Number(elem.imdbRating) >= 8.0 ? newArr.push({ title: elem.Title, rating: elem.imdbRating }) : null);
-// check array
-// push to new array
-// log(newArr);
-// stringify of new array
-filteredList = (newArr);
-// stringify new array
-// Only change code above this line
+log('ready to go!');
+
+// create a variable and name filteredList
+let filteredList = []; // changed to let statement from const
+/*
+
+
 console.log(filteredList);

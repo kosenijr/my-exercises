@@ -20,11 +20,16 @@ squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]) should return [16, 1764, 36].
 squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]) should return [9, 100, 49].
 ________________________________________________________________
 */
+// abbrev logs to console. then check.
+const log = console.log;
+log('ready!');
+// squareList function
 const squareList = arr => {
     // Only change code below this line
+    // filter positive integers
+    arr = arr.filter(elem => Number.isInteger(elem) && elem > 0);
+    // use map to square numbers with Math.pow method
+    arr = arr.map(elem => Math.pow(elem, 2));
     return arr;
     // Only change code above this line
 };
-
-const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
-console.log(squaredIntegers);

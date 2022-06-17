@@ -25,10 +25,11 @@ checkPositive([1, -2, 3, -4, 5]) should return false.
 ________________________________________________________________
 */
 function checkPositive(arr) {
-    // Only change code below this line
-
-
-    // Only change code above this line
+  // Only change code below this line
+  // use every method to check for positives
+  arr = arr.every(elem => elem > 0);
+  console.log(arr);
+  return arr
+  // Only change code above this line
 }
-
 checkPositive([1, 2, 3, -4, 5]);

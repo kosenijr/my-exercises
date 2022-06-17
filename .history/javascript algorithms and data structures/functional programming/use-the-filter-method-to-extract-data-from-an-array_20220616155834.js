@@ -150,20 +150,26 @@ const watchList = [
  The variable watchList holds an array of objects with information on several movies. Use a combination of filter and map on watchList to assign a new array of objects with only title and rating keys. The new array should only include objects where imdbRating is greater than or equal to 8.0. Note that the rating values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them.
  */
 
-// abbrev logs to console. then check.
+// abbrev logs to console, check
 const log = console.log;
-log('let\'s rock!');
-// change constant to let  for filteredList
-let filteredList = "";
-// create a new array
-let newArr = [];
-// map-to-filter processing
-watchList.filter(elem => Number(elem.imdbRating) >= 8.0 ? newArr.push({ title: elem.Title, rating: elem.imdbRating }) : null);
-// check array
-// push to new array
-// log(newArr);
-// stringify of new array
-filteredList = (newArr);
-// stringify new array
+log('ready to go!');
+
+// create a variable and name filteredList
+let filteredList = []; // changed to let statement from const
+/*
+
+*/
+// use filter method, store under filteredList, check.
+filteredList = watchList.filter(film => Number(film.imdbRating) >= 8.0);
+// log(filteredList);
+
+// use map method to retrieve titles and ratings, store in filteredList.
+// log(filteredList.map(film => `title: ${film.Title}, rating: ${film.imdbRating}`));
+filteredList = filteredList.map(film => ({ title: film["Title"], rating: film["imdbRating"] }));
+
+// store stringified array in filteredList
+filteredList = JSON.stringify(filteredList, null, '\t')
+// filteredList = JSON.parse(filteredList);
 // Only change code above this line
+
 console.log(filteredList);

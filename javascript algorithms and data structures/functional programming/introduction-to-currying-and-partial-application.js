@@ -47,10 +47,14 @@ Your code should include a final statement that returns x + y + z.
 ________________________________________________________________
 */
 function add(x) {
-    // Only change code below this line
-
-
-    // Only change code above this line
+  // Only change code below this line
+  // adding y and z respectively
+  return function add(y) {
+    return function add(z) {
+      return x + y + z
+    }
+  }
+  // Only change code above this line
 }
-
 add(10)(20)(30);
+console.log(add(10)(20)(30))
