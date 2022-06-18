@@ -26,11 +26,18 @@ splitify("Earth-is-our home") should return ["Earth", "is", "our", "home"].
 splitify("This.is.a-sentence") should return ["This", "is", "a", "sentence"].
 ________________________________________________________________
 */
+// abbrev logs to console. then check.
+const log = console.log;
+log('ready to go!')
+
 function splitify(str) {
     // Only change code below this line
-
-
+    str = str.split(/[-.,\s]/);
+    log(str);
+    return str
     // Only change code above this line
 }
 
 splitify("Hello World,I-am code");
+splitify("Earth-is-our home");
+splitify("This.is.a-sentence");

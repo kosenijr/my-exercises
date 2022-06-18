@@ -20,10 +20,23 @@ nonMutatingSort([1, 30, 4, 21, 100000]) should return [1, 4, 21, 30, 100000].
 nonMutatingSort([140000, 104, 99]) should return [99, 104, 140000].
 ________________________________________________________________
 */
+// abbrev logs to console
+const log = console.log;
+log('ready to go!');
+
 const globalArray = [5, 6, 3, 2, 9];
 
 function nonMutatingSort(arr) {
     // Only change code below this line
+    // create a new array, store old array within, and check.
+    const newArr = [...arr];
+    log(newArr);
+    // implement sort
+    arr = newArr.sort((a, b) => a < b ? -1 : 1);
+    // log(newArr, globalArray);
+    // log(nonMutatingSort([1, 30, 4, 21, 100000]));
+    return arr;
+
 
 
     // Only change code above this line

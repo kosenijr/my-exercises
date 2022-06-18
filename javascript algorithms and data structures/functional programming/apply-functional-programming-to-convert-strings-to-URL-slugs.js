@@ -28,10 +28,29 @@ urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone") should return the s
 urlSlug("Hold The Door") should return the string hold-the-door.
 ________________________________________________________________
 */
+// abbrev logs to console. then check.
+const log = console.log;
+log('let\'s rock!');
+
 // Only change code below this line
 function urlSlug(title) {
+    // change title lowercase
+    title = title.toLowerCase();
+    title = title.split(' ')
+    log(title, typeof (title));
+    // filter out spaces, then restore.
+    title = title.filter(elem => elem !== '' ? title.push(elem) : null);
+    // join through hyphenation
+    // check title
+    log(title);  // spaces removed
+    title = title.join("-")
+    // check productivity
+    log(title);
+    // return to complete
+    return title
 
 
 }
 // Only change code above this line
 urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+urlSlug(" Winter Is  Coming")

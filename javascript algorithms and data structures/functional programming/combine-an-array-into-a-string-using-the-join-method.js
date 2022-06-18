@@ -24,11 +24,15 @@ sentensify("The.force.is.strong.with.this.one") should return the string The for
 sentensify("There,has,been,an,awakening") should return the string There has been an awakening.
 ________________________________________________________________
 */
+// abbrev logs to console. then check.
+const log = console.log;
+log('ready to go!');
+// function to modify sentence
 function sentensify(str) {
     // Only change code below this line
-
-
+    str = str.split(/[-.,]/).join(" ");
+    log(str);
+    return str
     // Only change code above this line
 }
-
 sentensify("May-the-force-be-with-you");
