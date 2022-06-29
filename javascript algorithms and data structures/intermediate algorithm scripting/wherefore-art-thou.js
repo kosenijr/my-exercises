@@ -18,13 +18,46 @@ whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2,
 whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3}) should return []
 ________________________________________________________________
 */
+// abbrev. logs to console
+const log = console.log;
+log('ready to go!')
+
+// create a function to match source to collection
 function whatIsInAName(collection, source) {
     const arr = [];
     // Only change code below this line
+    // console.log(collection, source);
+
+    // for-of loop for navigation
+    for (let parts of collection) {
+        log(
+            // parts, // returns parts as objects in sequential array order
+            // Object.entries(parts), // turns parts into subarrays
+            // Object.entries(source), // turns source into subarrays
+            Object.entries(parts).toString(), // subarray parts to string
+            Object.entries(source).toString(), // subarray source to string
+            Object.
+
+        );
+
+    }
 
 
+    // check arr
+    // log(arr);
     // Only change code above this line
     return arr;
 }
 
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+// should return [{ first: "Tybalt", last: "Capulet" }].
+whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 });
+// should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }].
+whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 });
+// should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }].
+whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 });
+// should return [{ "apple": 1, "bat": 2, "cookie": 2 }].
+whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }, { "bat": 2 }], { "apple": 1, "bat": 2 });
+// should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }].
+whatIsInAName([{ "a": 1, "b": 2, "c": 3 }], { "a": 1, "b": 9999, "c": 3 });
+// should return []

@@ -18,8 +18,29 @@ destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].
 destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan") should return [12,92,65].
 ________________________________________________________________
 */
+// abbrev logs to console. then check.
+const log = console.log;
+log('ready to go!');
+// create destroyer function
 function destroyer(arr) {
+    /*
+        // check arguments object
+    // log(arguments);
+    // for-loop for navigation
+    for (let k = 1; k < arguments.length; k++) {
+        // check arguments object with k variable
+        // log(arguments[k]);
+        // use filter method on arguments
+        arr = arr.filter(elem => elem !== arguments[k] ? arr.push(elem) : null);
+    }
+    */
+
+    // Concise
+    for (let k = 1; k < arguments.length; k++) {
+        arr = arr.filter(elem => elem !== arguments[k] ? arr.push(elem) : null);
+    }
+
+    log(arr);
     return arr;
 }
-
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
