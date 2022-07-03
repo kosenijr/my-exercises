@@ -19,7 +19,6 @@ const log = console.log;
 log('ready to go!');
 // create a function: returns lowercase statements with dashes
 // ____________________________________________________________________________________________
-
 /*
 function spinalCase(str) {
     // rewrite regex to include a comma then capitalized letter for the purpose of arr. check.
@@ -51,7 +50,6 @@ function spinalCase(str) {
 
 }
 */
-
 // ____________________________________________________________________________________________
 
 /*

@@ -22,29 +22,57 @@ ________________________________________________________________
 const log = console.log;
 log('ready to go!')
 
+/*
 // create a function to match source to collection
 function whatIsInAName(collection, source) {
     const arr = [];
     // Only change code below this line
     // console.log(collection, source);
 
-    // for-of loop for navigation
-    for (let parts of collection) {
-        log(
-            // parts, // returns parts as objects in sequential array order
-            // Object.entries(parts), // turns parts into subarrays
-            // Object.entries(source), // turns source into subarrays
-            Object.entries(parts).toString(), // subarray parts to string
-            Object.entries(source).toString(), // subarray source to string
-            Object.
+    // for of loop
+    for (const parts of collection) {
+        // create arrays out of the parts and source objects, add flat method, then check.
+        // subarrays to reg arrays
+        let pEntries = Object.entries(parts).flat();
+        let sEntries = Object.entries(source).flat();
+        // stringify
+        let pStrings = JSON.stringify(pEntries);
+        let sStrings = JSON.stringify(sEntries);
 
-        );
+        // logs
+        // log(pEntries, sEntries);
+        // log(pEntries, ...sEntries, pEntries.includes(...sEntries));
+        // log(pStrings, sStrings, pStrings.indexOf(sStrings));
+
+        // set up ternary condition. then check.
+        // first check if entries are arrays
+        // log(Array.isArray(pEntries), Array.isArray(sEntries)); // both true
+
+        // now conditions.
+        // write the function for every Method.
+        const areAllIncluded = (elem) => pEntries.includes(elem);
+        // log(pEntries, sEntries, sEntries.every(areAllIncluded)) // correct sequence
+
+        sEntries.every(areAllIncluded) ? arr.push(parts) : null;
 
     }
+*/
+// ____________________________________________________________________
+// Concise the code
+
+// create a function to match source to collection
+function whatIsInAName(collection, source) {
+    const arr = [];
+    for (const parts of collection) {
+        let pEntries = Object.entries(parts).flat();
+        let sEntries = Object.entries(source).flat();
+        sEntries.every((elem) => pEntries.includes(elem)) ? arr.push(parts) : null;
+    }
+    // ____________________________________________________________________
 
 
     // check arr
-    // log(arr);
+    log(arr);
     // Only change code above this line
     return arr;
 }
