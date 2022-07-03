@@ -84,7 +84,6 @@ function spinalCase(str) {
     str = arr.join('').replace(/\s\s|_\s|\s/g, '-').toLowerCase();
     log(str);
     return str;
-
 }
 // ____________________________________________________________________________________________
 
