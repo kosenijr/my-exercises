@@ -24,28 +24,52 @@ myReplace("His name is Tom", "Tom", "john") should return the string His name is
 myReplace("Let us get back to more Coding", "Coding", "algorithms") should return the string Let us get back to more Algorithms.
 ________________________________________________________________
 */
-// abbrev logs to console. then check.
+
+/*
+// const log = console.log;
+// log('let\'s code!');
+// function myReplace(str, before, after) {
+
+//     /*
+//     -each variable, i.e. before & after, are one-word strings
+//     -replace method must be used with the string
+//     -if the first character of before or after are Uppercase(), then both terms should be capitalized
+//      */
+
+//     // exp
+//     // check
+//     log(
+//         // before[0],
+//         // before.slice(1),
+//         // after[0],
+//         // after.slice(1),
+//         // after[0].toUpperCase().concat(after.slice(1))
+//     );
+//     // conditions
+//     // Variable after's first char of should be uppercase, since variable before's first char is the same.
+//     str = before[0] === before[0].toUpperCase() ? str.replace(before, after[0].toUpperCase().concat(after.slice(1))) : str.replace(before, after[0].toLowerCase().concat(after.slice(1)));
+//     // Vice versa of previous condition
+//     log(str);
+
+
+
+
+//     return str;
+// }
+// _____________________________________________________________
+// concise the code.
 const log = console.log;
 log('let\'s code!');
 function myReplace(str, before, after) {
-
-    /*
-    -each variable, i.e. before & after, are one-word strings
-    -replace method must be used with the string
-    -if the first character of before or after are Uppercase(), then both terms should be capitalized
-     */
-
-
+    str = before[0] === before[0].toUpperCase() ? str.replace(before, after[0].toUpperCase().concat(after.slice(1))) : str.replace(before, after[0].toLowerCase().concat(after.slice(1)));
     log(str);
-
-
-
-
     return str;
 }
-// no change
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
-// after must be capitalized
-myReplace("A quick brown fox jumped over the lazy dog", "Jumped", "leaped");
-// before must be capitalized
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "Leaped");
+// ______________________________________________________________________
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"); // should return the string A quick brown fox leaped over the lazy dog.
+myReplace("Let us go to the store", "store", "mall") // should return the string Let us go to the mall.
+myReplace("He is Sleeping on the couch", "Sleeping", "sitting") // should return the string He is Sitting on the couch.
+myReplace("I think we should look up there", "up", "Down") // should return the string I think we should look down there.
+myReplace("This has a spellngi error", "spellngi", "spelling") // should return the string This has a spelling error.
+myReplace("His name is Tom", "Tom", "john") // should return the string His name is John.
+myReplace("Let us get back to more Coding", "Coding", "algorithms") // should return the string Let us get back to more Algorithms.
