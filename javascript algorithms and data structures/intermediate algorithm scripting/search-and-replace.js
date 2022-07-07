@@ -24,8 +24,28 @@ myReplace("His name is Tom", "Tom", "john") should return the string His name is
 myReplace("Let us get back to more Coding", "Coding", "algorithms") should return the string Let us get back to more Algorithms.
 ________________________________________________________________
 */
+// abbrev logs to console. then check.
+const log = console.log;
+log('let\'s code!');
 function myReplace(str, before, after) {
+
+    /*
+    -each variable, i.e. before & after, are one-word strings
+    -replace method must be used with the string
+    -if the first character of before or after are Uppercase(), then both terms should be capitalized
+     */
+
+
+    log(str);
+
+
+
+
     return str;
 }
-
+// no change
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+// after must be capitalized
+myReplace("A quick brown fox jumped over the lazy dog", "Jumped", "leaped");
+// before must be capitalized
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "Leaped");

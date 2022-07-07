@@ -18,8 +18,23 @@ pairElement("TTGAG") should return [["T","A"],["T","A"],["G","C"],["A","T"],["G"
 pairElement("CTCTA") should return [["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]].
 ________________________________________________________________
 */
-function pairElement(str) {
-    return str;
-}
+// abbrev logs to console
+const log = console.log;
+log('ready to go!');
 
+// create function for DNA elements, that takes a string
+function pairElement(str) {
+    // create a new array. then check the possibilities
+    // let [arr, [a, b], [c, d]] = [[...str], ['A', 'T'], ['C', 'G']];
+    let [arr, strand, a, b, c, d] = [[...str], [], 'A', 'T', 'C', 'G'];
+    // log(arr, `\n`, [a, b], [c, d], `\n `, [b, a], [d, c], `\n  `, strand);
+
+    // establish four pairs of strand AT and CG, and their alternates, within an array
+    strand.push([a, b], [b, a], [c, d], [d, c]);
+    log(strand);
+
+
+
+    log(str);
+}
 pairElement("GCG");
