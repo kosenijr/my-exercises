@@ -30,11 +30,31 @@ function pairElement(str) {
     // log(arr, `\n`, [a, b], [c, d], `\n `, [b, a], [d, c], `\n  `, strand);
 
     // establish four pairs of strand AT and CG, and their alternates, within an array
-    strand.push([a, b], [b, a], [c, d], [d, c]);
-    log(strand);
+    // strand.push([a, b], [c, d]);
+    strand.push([a, b], [c, d], [d, c], [b, a]);
 
+    // log(strand);
 
+    // check arr
+    // log(arr);
 
-    log(str);
+    // create for-of loop for navigation of strand keys.
+    for (let bond of strand) {
+        // use map method for array analytics
+        // check the possibilities, especially the equalities.
+        arr.map(elem => elem === bond[0] ? arr.splice(arr.indexOf(elem), 1, bond) : null);
+
+    }
+
+    // check array
+    // log(arr);
+    // reassign array to string
+    str = arr;
+    // return string
+    return str
+
 }
+
 pairElement("GCG");
+pairElement("ATCGA");
+pairElement("CTCTA");
