@@ -20,7 +20,29 @@ sumFibs(75024) should return 60696.
 sumFibs(75025) should return 135721.
 ________________________________________________________________
 */
+// abbrev logs to console, then check.
+const log = console.log;
+// create an arr with 1 as an element and one variable with the assignment of zero.
+let [arr, iV] = [[1], 0];
+// log(arr, iV);
+// create function to sum up fibonacci numbers
 function sumFibs(num) {
+    // log(num); // check num
+    // start gathering numbers by making a formula: consider the reduce method, with an initial value (iV).
+    // for loop iteration
+    for (let cV = 0; cV < num; cV++) {
+        // arr.push(arr.reduce((pV, cV) => pV + cV));
+        // log(arr[0], cV, arr.at(-1));
+        // log(cV + arr.at(-1));
+
+    }
+
+    log(arr)
+
+
+
+
+
     return num;
 }
 
