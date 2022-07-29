@@ -20,7 +20,6 @@ sumFibs(75024) should return 60696.
 sumFibs(75025) should return 135721.
 ________________________________________________________________
 */
-
 // abbrev. logs to console
 const log = console.log;
 // create an empty array
@@ -35,14 +34,14 @@ const sumFibs = (num) => {
     // log(arr); // logs arr element value 1.
     // second, use reduce formula to create Fibonacci pattern
     arr.reduce((prevVal, currVal) => (prevVal + currVal), initVal);
-    log(arr);
-    // 
+    // log(arr);
+
     // check arr
     // log(arr)
-    // 
-    // 
-    // 
-    // 
+
+
+
+
     return num
 }
 
