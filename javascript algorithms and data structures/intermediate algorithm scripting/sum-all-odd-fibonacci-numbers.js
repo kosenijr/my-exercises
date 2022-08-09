@@ -1,7 +1,6 @@
 /*
 NOTES
 - where you can't use splice for adding arrays, declare array in the front.
-
 */
 
 /*
