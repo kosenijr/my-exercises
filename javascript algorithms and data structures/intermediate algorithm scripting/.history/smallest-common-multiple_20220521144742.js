@@ -20,31 +20,8 @@ smallestCommons([1, 13]) should return 360360.
 smallestCommons([23, 18]) should return 6056820.
 ________________________________________________________________
 */
-// create function for least common multiple
 function smallestCommons(arr) {
-    // declare log and destructure arr, then check.
-    let [log, newarr, [min, max]] = [console.log, [], arr];
-    // log(arr);
-    // sort array correctly
-    // arr = [min, max].sort((a, b) => a - b); //does not work correctly
-    [min, max] = arr.sort((a, b) => a - b); // works correctly
-    // log(arr, min, max)
-    // for loop for navigation
-    for (let b = min; b <= max; b++) {
-        newarr.push(b);
-
-    }
-    // log(newarr);
-    // find lcm of newarr
-    log(newarr);
-
-
-
-    // return num
+    return arr;
 }
 
-smallestCommons([1, 5]) // should return 60.
-smallestCommons([5, 1]) // should return 60.
-smallestCommons([2, 10]) // should return 2520.
-smallestCommons([1, 13]) // should return 360360.
-smallestCommons([23, 18]) // should return 6056820.
+smallestCommons([1, 5]);
