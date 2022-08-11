@@ -33,16 +33,10 @@ function smallestCommons(arr) {
     for (let b = min; b <= max; b++) {
         newarr.push(b);
     }
-    // log(newarr);
+    log(newarr);
     // find lcm of newarr
     log(newarr);
-    // forEach method
-    // testing
-    // newarr.forEach(elem => log(elem, 2, Number.isInteger(elem / 2)))
-    // checking for integers within newarr with various denominators
-    newarr.forEach(elem => Number.isInteger(elem / 2) ? newarr.splice(newarr.indexOf(elem), 1, (elem / 2)) : null);
 
-    log(newarr);
 
 
     // return num
