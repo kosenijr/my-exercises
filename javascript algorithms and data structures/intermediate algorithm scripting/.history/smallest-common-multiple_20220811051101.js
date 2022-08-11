@@ -42,7 +42,7 @@ function smallestCommons(arr) {
     // checking for integers within newarr with various denominators
     newarr.forEach(elem => Number.isInteger(elem / 2) ? newarr.splice(newarr.indexOf(elem), 1, (elem / 2)) : null);
 
-    /* Will have to find a way to change the denominator to run array numbers until they reach one. */
+    /** */
 
     log(newarr);
 
@@ -54,4 +54,4 @@ function smallestCommons(arr) {
 // smallestCommons([5, 1]) // should return 60.
 // smallestCommons([2, 10]) // should return 2520.
 // smallestCommons([1, 13]) // should return 360360.
-smallestCommons([23, 18]) // should return 6056820.
+smallestCommons([23, 18]) // should return 6056820
