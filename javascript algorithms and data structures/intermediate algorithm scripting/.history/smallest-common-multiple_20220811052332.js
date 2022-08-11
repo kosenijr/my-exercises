@@ -30,7 +30,7 @@ function smallestCommons(arr) {
     [min, max] = arr.sort((a, b) => a - b); // works correctly
     // log(arr, min, max)
     // for loop for navigation
-    for (let b = min; b <= max; b++) { newarr.push(b) }
+    for (let b = min; b <= max; b++) {newarr.push(b) }
     // log(newarr);
     // find lcm of newarr
     // log(newarr);
