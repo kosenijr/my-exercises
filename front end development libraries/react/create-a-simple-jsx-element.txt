@@ -1,0 +1,3 @@
+// const JSX = <div></div>;
+// replace prior element with Hello JSX! within h1 element
+const JSX = <h1>Hello JSX!</h1>

@@ -1,0 +1,27 @@
+// const JSX = 
+// <div>
+//   <h1>'Create a Complex JSX Element'</h1>
+//   <p>'In this activity, we will provide a JSX Element with the following:'</p>
+//   <ul>
+//     <li>'parent elements'</li>
+//     <li>'a p/paragraph tag'</li>
+//     <li>'an unordered list with three listed items'</li>
+//   </ul>
+// </div>
+
+// -------------------------------------------------------------------------------
+const JSX = 
+<div>
+  <h1>Create a Complex JSX Element</h1>
+  <p>In this activity, we will provide a JSX Element with the following:</p>
+  <ul>
+    <li>parent elements</li>
+    <li>a p/paragraph tag</li>
+    <li>an unordered list with three listed items</li>
+  </ul>
+  <ol>
+  <li>This</li>
+  <li>is</li>
+  <li>amazing!</li>
+  </ol>
+</div>

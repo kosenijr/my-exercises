@@ -1,0 +1,17 @@
+// Change code below this line
+// abbrev logs to console
+const log = console.log;
+
+// set up component through extension
+class MyComponent extends React.Component {
+  // set up constructor and super, both taking props
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return <div><h1>My First React Component!</h1></div>
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.querySelector('#challenge-node'));
