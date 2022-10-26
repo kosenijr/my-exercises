@@ -17,12 +17,12 @@ const log = console.log;
 const ADD = 'ADD';
 
 const reducer = (state = 0, action) => {
-    switch (action.type) {
-        case ADD:
-            return state + 1;
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case ADD:
+      return state + 1;
+    default:
+      return state;
+  }
 };
 
 const store = Redux.createStore(reducer);
@@ -34,7 +34,7 @@ let count = 0;
 // callback function
 const inCounting = () => {
     return count++
-}
+  }
 // subscribe
 // log(store.subscribe(inCounting));
 store.subscribe(inCounting)
