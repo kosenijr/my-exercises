@@ -53,4 +53,4 @@ const decAction = () => {
 const store = Redux.createStore(counterReducer); // Define the Redux store here, passing in your reducers
 log(store.dispatch(incAction()), store.getState()); // +1
 log(store.dispatch(decAction()), store.getState()); // -1
-log('testing');
+log(testing)
