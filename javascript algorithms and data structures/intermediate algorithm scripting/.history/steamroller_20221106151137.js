@@ -21,11 +21,11 @@ const log = console.log;
 function steamrollArray(arr) {
     // for loop navigation
     for (let k = 0; k < arr.length; k++) {
-        log(arr[k]);
-        // arr.map(elem => Array.isArray(arr[k]) ? arr.splice(arr.indexOf(arr[k]), 1, ...arr[k].concat()) : null);
-        arr.map(elem => Array.isArray(arr[k]) ? arr.splice(arr.indexOf(arr[k]), 1, ...arr[k]) : null);
+        // log(arr[k]);
+        arr.map(elem => Array.isArray(arr[k]) ? arr.splice(arr.indexOf(arr[k]), 1, ...arr[k].concat()) : null);
+        arr.map(elem => Array.isArray(arr[k]) ? arr.splice(arr.indexOf(arr[k]), 1, ...arr[k].concat()) : null);
     }
-    // log(arr);
+    log(arr);
     return arr;
 }
 
