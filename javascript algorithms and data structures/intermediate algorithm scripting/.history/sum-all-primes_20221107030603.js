@@ -175,7 +175,7 @@ function sumPrimes(num) {
     }
     log(arr)
     num = arr.reduce((prevVal, currVal) => prevVal + currVal);
-    log(num);
+    // log(num);
     return num;
 
 }

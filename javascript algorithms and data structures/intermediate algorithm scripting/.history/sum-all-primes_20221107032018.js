@@ -165,19 +165,4 @@ function sumPrimes(num) {
     // sumPrimes(977) // should return 73156.
 */
 // __________________________________________________________________
-
-let [log, arr, arrComp] = [console.log, [], []];
-function sumPrimes(num) {
-    for (let k = 2; k <= num; k++) {
-        arr.push(k);
-        arr.forEach(elem => (k % elem === 0) && (elem !== 1 && elem !== k) ? arrComp.push(k) : null);
-        arr = arr.filter(elem => !arrComp.includes(elem) ? elem : null);
-    }
-    log(arr)
-    num = arr.reduce((prevVal, currVal) => prevVal + currVal);
-    log(num);
-    return num;
-
-}
-sumPrimes(10) // should return 17.
-sumPrimes(977) // should return 73156.
+clear

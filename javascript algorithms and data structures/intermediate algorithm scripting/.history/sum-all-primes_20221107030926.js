@@ -165,19 +165,54 @@ function sumPrimes(num) {
     // sumPrimes(977) // should return 73156.
 */
 // __________________________________________________________________
-
-let [log, arr, arrComp] = [console.log, [], []];
-function sumPrimes(num) {
-    for (let k = 2; k <= num; k++) {
-        arr.push(k);
-        arr.forEach(elem => (k % elem === 0) && (elem !== 1 && elem !== k) ? arrComp.push(k) : null);
-        arr = arr.filter(elem => !arrComp.includes(elem) ? elem : null);
+function smallestCommons(arr) {
+    // declare log and destructure arr, then check.
+    let [arrMain, [min, max], arrPrime, arrPrior, arrFirst, arrSecond, arrThird, arrCompiled, arrPriorComp, log, num] = [[], arr, [], [], [], [], [], [], [], console.log];
+    // reinforce the proper and sequential min and max values.
+    [min, max] = arr.sort((a, b) => a - b); // works correctly
+    // ---------------------------------
+    // place 1st for loop here to ensure proper max.
+    for (let k = 2; k <= max; k++) {
+      // push k into arrPrior then check
+      arrPrior.push(k);
+      // log(arrPrior);
+      // ---------------------------------
+      // composite: no remainder and elem does not equal 1 or itself, push into composite array
+      arrPrior.forEach((elem) => k % elem === 0 && elem !== 1 && elem !== k ? arrPriorComp.push(k) : null);
+      // filter non-composite numbers into arrPrime
+      arrPrime = arrPrior.filter((elem) => !arrPriorComp.includes(elem) ? elem : null);
+      // ---------------------------------
     }
-    log(arr)
-    num = arr.reduce((prevVal, currVal) => prevVal + currVal);
+    for (let b = min; b <= max; b++) {
+      // push b into arrMain to create a numerator array
+      arrMain.push(b);
+    };
+    for (const den of arrPrime) {
+      arrMain.map(num => Number.isInteger(num / den) && !arrFirst.includes(den) ? arrFirst.push(den) : null);
+      log(`arrFirst: ${arrFirst}`);
+      arrMain.map(num => Number.isInteger((num / den) / den) && (((num / den) % den) === 0) && !arrSecond.includes(den) ? arrSecond.push(den) : null);
+      log(`arrSecond: ${arrSecond}`);
+      arrMain.map(num => ((((num / den) / den) % den) === 0) && !arrThird.includes(den) ? arrThird.push(den) : null);
+      log(`arrThird: ${arrThird}`);
+    }
+    arrCompiled = [...arrFirst, ...arrSecond, ...arrThird];
+    log(arrCompiled);
+    // use reduce
+    num = arrCompiled.reduce((prev, curr) => prev * curr)
+    // ---------------------------------
+    // check then return num
     log(num);
-    return num;
-
-}
+    return num
+  }
+  // ---------------------------------
+  // smallestCommons([1, 5]) // should return 60.
+  // smallestCommons([5, 1]) // should return 60.
+  // // [2, 2, 3, 5]
+  // smallestCommons([2, 10]) // should return 2520.
+  // // [2, 2, 2, 3, 3, 5, 7]
+  // smallestCommons([1, 13]) // should return 360360.
+  // // [2, 2, 2, 3, 3, 5, 7, 11, 13]
+  // smallestCommons([23, 18]); // should return 6056820.
+  // [2, 2, 3, 3, 5, 7, 11, 19, 23]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 sumPrimes(10) // should return 17.
 sumPrimes(977) // should return 73156.
