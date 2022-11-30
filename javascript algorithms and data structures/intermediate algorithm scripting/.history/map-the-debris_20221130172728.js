@@ -61,7 +61,6 @@ function orbitalPeriod(arr) {
     log(arr);
     // return statement
     return arr;
-    // _______________________________________________________________________
 }
 // test
 // orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }])

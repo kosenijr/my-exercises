@@ -40,28 +40,6 @@ function orbitalPeriod(arr) {
     return arr;
     */
 //    _________________________________________________________________________
-
-const log = console.log;
-// log('ready to solve!');
-function orbitalPeriod(arr) {
-    // included and stored pi and square root function, as well as an exponential function, rounder, gravitational parameter, and earth's radius: changed GM to mu for the purpose of this exercise.
-    const [pi, sqrt, p, round, mu, earthRadius] = [Math.PI, Math.sqrt, Math.pow, Math.round, 398600.4418, 6367.4447];
-    // for-of loop navigation
-    for (let b = 0; b < arr.length; b++) {
-        // implement Kepler's formula
-        const orbitalPeriod = round((2 * pi) * (sqrt(p(earthRadius + arr[b].avgAlt, 3) / mu)));
-        // log(orbitalPeriod);
-        arr[b].orbitalPeriod = orbitalPeriod;
-        // log(arr);
-        // log(orbitalPeriod); // displays average altitude.
-        delete arr[b].avgAlt;
-        // log(orbitalPeriod);
-    }
-    // check array
-    log(arr);
-    // return statement
-    return arr;
-    // _______________________________________________________________________
 }
 // test
 // orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }])
