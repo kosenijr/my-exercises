@@ -47,29 +47,29 @@ function orbitalPeriod(arr) {
     const [mu, earthRadius, pi, pow, round, sqrt, cbrt, log] = [398600.4418, 6367.4447, Math.PI, Math.pow, Math.round, Math.sqrt, Math.cbrt, console.log];
     // for-of loop
     for (const obj of arr) {
-        // check for average altitude: s
-        // log(obj.avgAlt);
-        const orbitalPeriod = round((2 * pi) * sqrt(pow((earthRadius + obj.avgAlt), 3) / mu));
-        // check orbital period formula: s
-        //  log(orbitalPeriod);
-        // add orbitalPeriod and delete avgAlt
-        arr.map(elem => typeof (elem) === 'object' ? obj.orbitalPeriod = orbitalPeriod : null);
-        // log(arr);
-        arr.map(elem => obj.hasOwnProperty('avgAlt') ? delete obj.avgAlt : null);
+      // check for average altitude: s
+      // log(obj.avgAlt);
+      const orbitalPeriod = round((2 * pi) * sqrt(pow((earthRadius + obj.avgAlt), 3) / mu));
+      // check orbital period formula: s
+      //  log(orbitalPeriod);
+      // add orbitalPeriod and delete avgAlt
+      arr.map(elem => typeof(elem) === 'object' ? obj.orbitalPeriod = orbitalPeriod : null);
+      // log(arr);
+          arr.map(elem => obj.hasOwnProperty('avgAlt') ? delete obj.avgAlt : null);
     }
     log(arr);
     return arr;
-}
-// orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}])
-// should return [{name: "sputnik", orbitalPeriod: 86400}].
-orbitalPeriod([{ name: "iss", avgAlt: 413.6 }, { name: "hubble", avgAlt: 556.7 }, { name: "moon", avgAlt: 378632.553 }])
-// should return [{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}]
+  }
+  // orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}])
+  // should return [{name: "sputnik", orbitalPeriod: 86400}].
+  orbitalPeriod([{ name: "iss", avgAlt: 413.6 }, { name: "hubble", avgAlt: 556.7 }, { name: "moon", avgAlt: 378632.553 }])
+  // should return [{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}]
 
-/*
-NOTES
-- use a for-of loop complements the inner use of the map method with direct reference to the singular ref of the loop: i.e., obj within the map method helped to clear out difficulties within computation.
- */
-// _______________________________________________________________________
+  /*
+  NOTES
+  - use a for-of loop complements the inner use of the map method with direct reference to the singular ref of the loop: i.e., obj within the map method helped to clear out difficulties within computation.
+   */
+    // _______________________________________________________________________
 
 // test
 // orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }])
