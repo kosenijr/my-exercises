@@ -45,6 +45,6 @@ const Person = function (firstAndLast) {
     };
     return firstAndLast;
 };
-
+ 
 const bob = new Person('Bob Ross');
 bob.getFullName();
